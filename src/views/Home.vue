@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    sdadas
+    <router-link to="/">sdadas</router-link>
   </div>
 </template>
 
