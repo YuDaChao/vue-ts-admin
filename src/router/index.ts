@@ -14,7 +14,7 @@ export const constantRouterMap: IRouterConfig[] & RouteConfig[] = [
     children: [{
       path: '/',
       component: () => import('@/views/Home.vue'),
-      meta: { title: '概览', icon: 'icon' },
+      meta: { title: '概览', icon: 'dashboard' },
     }],
   },
   {
@@ -29,7 +29,9 @@ export const constantRouterMap: IRouterConfig[] & RouteConfig[] = [
   },
 ];
 
-export default new Router({
+const router = new Router({
   routes: constantRouterMap,
   scrollBehavior: () => ({ x: 0, y: 0 }),
-});
+})
+
+export default router;

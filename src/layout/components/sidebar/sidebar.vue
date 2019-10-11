@@ -39,10 +39,12 @@
   })
   export default class Sidebar extends Vue {
     @Getter('sidebarOpen') private sidebarOpen!: boolean
+    @Getter('menuList') private menuList!: IRouterConfig[]
 
-    private get menuList(): IRouterConfig[] {
-      return this.$router.options.routes
-    }
+    // private get menuList(): IRouterConfig[] {
+    //   console.log(this.$router)
+    //   return this.$router.options.routes
+    // }
 
     private get activeMenu(): string {
       const route = this.$route

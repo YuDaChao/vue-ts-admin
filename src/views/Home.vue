@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <router-link to="/">sdadas</router-link>
+    <ve-line :data="chartData"></ve-line>
   </div>
 </template>
 
@@ -11,5 +11,17 @@ import { Component, Vue } from 'vue-property-decorator';
   components: {
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  private chartData: any = {
+    columns: ['date', 'PV'],
+    rows: [
+      { date: '01-01', PV: 1231 },
+      { date: '01-02', PV: 1223 },
+      { date: '01-03', PV: 2123 },
+      { date: '01-04', PV: 4123 },
+      { date: '01-05', PV: 3123 },
+      { date: '01-06', PV: 7123 },
+    ],
+  }
+}
 </script>

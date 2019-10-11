@@ -20,7 +20,7 @@
   export default class SidebarLogo extends Vue {
     @Prop({default: true}) private readonly collapse!: boolean
 
-    private title: string = '云合数据'
+    private title: string = 'Vue-Ts-Admin'
     private logo: string = 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
   }
 </script>
