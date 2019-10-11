@@ -15,14 +15,13 @@
 
 <script lang="ts">
   import {Vue, Component, Prop} from 'vue-property-decorator'
-  import logo from '@/assets/logo.png'
 
   @Component
   export default class SidebarLogo extends Vue {
     @Prop({default: true}) private readonly collapse!: boolean
 
     private title: string = '云合数据'
-    private logo: string = logo
+    private logo: string = 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
   }
 </script>
 

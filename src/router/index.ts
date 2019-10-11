@@ -11,7 +11,6 @@ export const constantRouterMap: IRouterConfig[] & RouteConfig[] = [
     path: '/',
     name: 'home',
     component: Layout,
-    meta: { title: '概览', icon: 'guide' },
     children: [{
       path: '/',
       component: () => import('@/views/Home.vue'),
@@ -23,7 +22,7 @@ export const constantRouterMap: IRouterConfig[] & RouteConfig[] = [
     name: 'show',
     component: Layout,
     children: [{
-      path: '/show',
+      path: 'index',
       component: () => import('@/views/About.vue'),
       meta: { title: '网络播放表现', icon: 'chart' },
     }],

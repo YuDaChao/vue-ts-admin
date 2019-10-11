@@ -3,9 +3,9 @@
     <template
       v-if="hasOneShowingChild(menu.children, menu) && ((!onlyOneChild.children || onlyOneChild.noShowingChildren) || !menu.alwaysShow)"
     >
-      <app-link v-if="onlyOneChild.meta" :to="onlyOneChild.path">
+      <app-link v-if="onlyOneChild.meta" :to="resolvePath(onlyOneChild.path)">
         <el-menu-item
-            :index="resolvePath(menu.path)"
+            :index="resolvePath(onlyOneChild.path)"
             :class="{'submenu-title-noDropdown': !isNest}"
         >
           <svg-icon v-if="onlyOneChild.meta.icon" :name="onlyOneChild.meta.icon || item.meta.icon"></svg-icon>
