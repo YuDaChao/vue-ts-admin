@@ -1,6 +1,6 @@
-import { Module } from 'vuex';
-import { IAppState } from '@/store/types';
-import { constantRouterMap } from '@/router';
+import { Module } from "vuex";
+import { IAppState } from "@/store/types";
+import { constantRouterMap } from "@/router";
 
 const namespaced: boolean = true;
 
@@ -8,14 +8,14 @@ const app: Module<IAppState, any> = {
   namespaced,
   state: {
     sidebarOpen: true,
-    menuList: constantRouterMap,
+    menuList: constantRouterMap
   },
   mutations: {
     toggleSidebar: (state: IAppState) => {
-      state.sidebarOpen = !state.sidebarOpen
-    },
+      state.sidebarOpen = !state.sidebarOpen;
+    }
   },
-  actions: {},
+  actions: {}
 };
 
-export default app
+export default app;
