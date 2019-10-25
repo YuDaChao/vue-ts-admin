@@ -1,8 +1,6 @@
 import { IRouterConfig } from "@/router/types";
-export interface IAppState {
-  sidebarOpen: boolean;
-  menuList: IRouterConfig[];
-}
+import { IAppState } from "./modules/app/types";
+import { IUserState } from "./modules/user/types";
 
 export interface IGettersState {
   sidebarOpen: (state: IAppState) => boolean;
@@ -11,4 +9,5 @@ export interface IGettersState {
 
 export interface IRootState {
   app: IAppState;
+  user: IUserState;
 }

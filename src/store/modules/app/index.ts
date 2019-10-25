@@ -1,5 +1,5 @@
 import { Module } from "vuex";
-import { IAppState } from "@/store/types";
+import { IAppState } from "./types";
 import { constantRouterMap } from "@/router";
 
 const namespaced: boolean = true;
