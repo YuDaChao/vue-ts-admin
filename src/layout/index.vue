@@ -12,26 +12,27 @@
 </template>
 
 <script lang="ts">
-  import {Component, Vue} from 'vue-property-decorator'
-  import {Getter} from 'vuex-class';
-  import AppMain from './components/app-main.vue'
-  import SideBar from './components/sidebar/sidebar.vue'
-  import NavBar from './components/navbar/navbar.vue'
+import { Component, Vue } from "vue-property-decorator";
+import { Getter } from "vuex-class";
+import AppMain from "./components/app-main.vue";
+import SideBar from "./components/sidebar/sidebar.vue";
+import NavBar from "./components/navbar/navbar.vue";
 
-  @Component({
-    components: {
-      AppMain,
-      SideBar,
-      NavBar,
-    },
-  })
-  export default class Index extends Vue {
-    @Getter('sidebarOpen') private sidebarOpen!: boolean
-    private get sidebarCls(): object {
-      return {
-        hideSidebar: !this.sidebarOpen,
-        openSidebar: this.sidebarOpen,
-      }
-    }
+@Component({
+  components: {
+    AppMain,
+    SideBar,
+    NavBar
   }
+})
+export default class Index extends Vue {
+  @Getter("sidebarOpen")
+  private sidebarOpen!: boolean;
+  private get sidebarCls(): object {
+    return {
+      hideSidebar: !this.sidebarOpen,
+      openSidebar: this.sidebarOpen
+    };
+  }
+}
 </script>

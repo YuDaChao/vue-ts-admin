@@ -14,7 +14,8 @@
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "quotemark": [true, "single"],
-    "semicolon": false
+    "quotemark": [true, "double"],
+    "semicolon": false,
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
   }
 }

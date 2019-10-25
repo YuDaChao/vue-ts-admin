@@ -10,6 +10,7 @@
     "svg": "vsvg -s ./src/icons/svg -t ./src/icons/components --ext ts --es6"
   },
   "dependencies": {
+    "@types/path-to-regexp": "^1.7.0",
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
     "echarts": "^4.3.0",
